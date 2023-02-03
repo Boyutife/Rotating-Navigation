@@ -1,0 +1,24 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: #333;
+  color: #222;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.container{
+  background-color: #fafafa;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 50px;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+}
+
+.show-nav {
+  transform: rotate(-20deg);
+}
