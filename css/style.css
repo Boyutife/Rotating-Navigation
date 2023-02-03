@@ -10,6 +10,15 @@ body{
   overflow-x: hidden;
 }
 
+p{
+  line-height: 1.5;
+  color: #333;
+}
+
+h1{
+  margin-bottom: 0;
+}
+
 .container{
   background-color: #fafafa;
   min-height: 100vh;
@@ -21,4 +30,92 @@ body{
 
 .show-nav {
   transform: rotate(-20deg);
+}
+
+.circle-container{
+  position: fixed;
+  top: -110px;
+  left: -100px;
+}
+
+.circle{
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition:  transform 0.5s linear;
+}
+
+.circle button{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  background: transparent;
+  border: 0;
+  font-size: 25px;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+ #open {
+  left: 55%;
+}
+
+#close{
+  top: 60%;
+  left: 35%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.show-nav .circle{
+  transform: rotate(-70deg);
+}
+
+nav{
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  display: none;
+}
+
+nav li {
+  list-style: none;
+  padding: 8px;
+  color: #fafafa;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.4s ease;
+}
+
+ nav li + li {
+  margin-left: 15px;
+}
+
+nav li + li + li {
+  margin-left: 30px;
+} 
+
+nav li a:hover {
+  color: #ff7979;
+}
+
+nav li i {
+  padding-right: 10px;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.4s;
+} 
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content small {
+  font-style: italic;
+  color: #222;
 }
